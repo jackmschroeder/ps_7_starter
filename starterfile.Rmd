@@ -1,0 +1,18 @@
+---
+title: "starter"
+author: "Jack Schroeder"
+date: "11/14/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(dplyr)
+library(stringr)
+
+download.file(url="https://piazza.com/class/jkjtds7xjxd3jy?cid=350", destfile = "jack.csv")
+
+
+```
