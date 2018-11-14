@@ -12,7 +12,7 @@ library(tidyverse)
 library(dplyr)
 library(stringr)
 
-download.file(url="https://piazza.com/class/jkjtds7xjxd3jy?cid=350", destfile = "jack.csv")
+download.file(url="https://piazza.com/redirect/s3?bucket=uploads&prefix=attach%2Fjkjtds7xjxd3jy%2Fjlr7wvzsace3kp%2Fjoc6wbypyxy7%2Fmt_2_results.csv", destfile = "jack.csv")
 
 
 ```

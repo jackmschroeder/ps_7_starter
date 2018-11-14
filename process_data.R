@@ -28,4 +28,16 @@ jack <- jack %>%
 
 joined <- left_join(upshot, jack)
 
-joined
+join2 <- joined %>% 
+  group_by(district,educ) %>% 
+  count() %>% 
+  spread(key=educ,value=n)
+
+join2[is.na(join2)] <- 0
+
+join2 <- join2%>% 
+  mutate(total = `High school` + `Some college or trade school` + `Graduate or Professional Degree` + `Bachelors' degree` + `[DO NOT READ] Refused` + `[DO NOT READ] Don't know/Refused` + `Grade school`) %>% 
+  mutate(ubersmart = `Graduate or Professional Degree` / total) %>% 
+  select(ubersmart)
+
+left_join(joined,join2)
